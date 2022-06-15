@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Apps Local
 
     'api_rest',
+    'login',
 
     # Rest Framework
 
@@ -64,7 +65,9 @@ ROOT_URLCONF = 'dropshipping_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'base_templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +79,8 @@ TEMPLATES = [
         },
     },
 ]
+
+APPEND_SLASH=True
 
 WSGI_APPLICATION = 'dropshipping_api.wsgi.application'
 
