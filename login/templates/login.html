@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>DROP | PYTHON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+    <link rel="icon" href="https://freepngimg.com/download/python_logo/4-2-python-logo-picture.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_login.css' %}"/>
+</head>
+<body class="text-center">
+    {% block content %}{% endblock %}
+
+    <img src="{% static 'img/background-login.jpg' %}" class="background">
+    <div class="quadrado">
+        <img src="{% static 'img/logo.png' %}" class="logo">
+        <form class="form-signin" action="submit", method="POST">{% csrf_token %}
+            <div class="form-group">
+                <label for="username" class="sr-only">Nome de usuário ou e-mail</label>
+
+                <input type="username", class="form-control" id="username" name="username", placeholder="Nome de usuário ou e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="password"></label>
+                <input type="password", class="form-control" id="password" name="password", placeholder="Senha">
+            </div>
+
+            <div>
+                {% for message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="button-login">Entrar</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="bordas1">
+    </div>
+    <div class="bordas2">
+    </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+* {
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+p {
+    font-family: 'Open Sans';
+    font-style: normal;
+}
+
+.sair {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    color: black;
+}
+
+.chave_valor {
+    color: white;
+    position: relative;
+    top: 3%;
+    left: 24%;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.data-menu {
+    position: absolute;
+    top: 20%;
+    color: black;
+    left: 5%;
+    font-size: 20px;
+}
+
+.data {
+    color: black;
+    position: relative;
+    top: 13%;
+    left: 5%;
+}
+
+.microservice {
+    position: absolute;
+    position: absolute;
+    top: 20%;
+    left: 3%
+}
+
+.quadrado {
+    position: absolute;
+    width: 100%;
+    top: -24px;
+    background: #FCB62B;
+    box-sizing: border-box;
+}
+
+.quadrado2 {
+    position: absolute;
+    width: 75%;
+    height: 5%;
+    top: 100px;
+    background: #FCB62B;
+    border: 1px solid #FCB62B;
+    box-sizing: border-box;
+}
+
+
+.quadradopreto {
+    position: relative;
+    height: 600px;
+    top: 50px;
+    background: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+}
+
+.logs {
+    color: white;
+    position: relative;
+    top: -35px;
+    margin: 0;
+}
+
+.erros {
+    position: relative;
+    top: -50px;
+    color: yellow;
+}
+
+.success {
+    position: relative;
+    top: -50px;
+    color: green;
+}
+
+.criticals {
+    position: relative;
+    top: -50px;
+    color: tomato;
+
+}
+
+.infos {
+    position: absolute;
+    padding: 10px;
+    margin: 0px
+
+}
+
+.date {
+    position: absolute;
+}
+
+
+.projectoption {
+    position: absolute;
+    left: 1%;
+    top: 44%;
+}
+
+
+.dataoption {
+    position: absolute;
+    left: 11%;
+    top: 44%;
+    border-radius: 2px;
+}
+
+
+.buttonpesquisar:hover{    
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+nav {
+    position: relative;
+    background-color: #FCB62B;
+    left: 89%;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    top: 10px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+nav ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color: #FCB62B;
+    margin-top: 15px;
+    margin-left: -38px;
+}
+
+nav ul li:hover .sub-menu-1 ul{
+    display: block;
+}
+
+nav ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+nav ul li:hover .sub-menu-1 ul li{
+    background-color: #FCB62B;
+}
+
+/* From uiverse.io by @adamgiebl */
+button {
+    position: absolute;
+    font-family: inherit;
+    /* font-size: 20px; */
+    background: black;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    /* align-items: center; */
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    right: 77%;
+    top: 40px;
+    transition: all 0.2s;
+   }
+   
+button span {
+display: block;
+margin-left: 0.3em;
+transition: all 0.3s ease-in-out;
+}
+
+button svg {
+display: block;
+transform-origin: center center;
+transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+transform: translateX(5em);
+}
+
+button:active {
+transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+from {
+    transform: translateY(0.1em);
+}
+
+to {
+    transform: translateY(-0.1em);
+}
+}
+

@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 
 from api_rest.api.viewsets import DepartmentsViewSet
+from login.views import logout_user
 
 router = routers.DefaultRouter()
 router.register(r'departments', DepartmentsViewSet, basename='Departments')
@@ -31,5 +32,9 @@ urlpatterns = [
     path('rest-auth/', include('rest_auth.urls')),
 
     path('api/v1/', include(router.urls)),
+    path('login/', include('login.urls')),
+    path('logout/', logout_user),
+    path('', include('api_rest.urls')),
+
 
 ]

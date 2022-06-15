@@ -1,0 +1,84 @@
+* {
+    margin:0;
+}
+
+.h5 {
+    color: white;
+}
+
+.background {
+    display: table;
+    width: 100vw;
+    height: 100vh;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    position: relative;
+    right: 255px;
+    top: 14px;
+}
+
+.quadrado {
+    position: absolute;
+    width: 720px;
+    height: 880px;
+    left: 32%;
+    top: 41px;
+    background: #FCB62B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+}
+
+.cadastrase {
+    text-align: center;
+    position: relative;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    top: 63px;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.linha {
+    position: relative;
+    width: 640px;
+    height: 0px;
+    left: 41px;
+    top: 25px;
+    border: 1px solid #FFFAFA;
+}
+
+.logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    right: 286px;
+
+}
+.form-control {
+    position: absolute;
+    width: 408px;
+    height: 41px;
+    top: 10px;
+    right: 55px;
+    background: #FFFFFF;
+    border: 1px solid #FCB62B;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.button-cadastra {
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    left: 180px;
+    top: 800px;
+    background: #FFFAFA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
