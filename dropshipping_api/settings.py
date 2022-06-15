@@ -41,13 +41,16 @@ INSTALLED_APPS = [
     # Apps Local
 
     'api_rest',
-    'login',
+    'login', # For Tests
+    'register', # For Tests
 
     # Rest Framework
 
     'rest_framework',
     'rest_framework.authtoken',
 
+    ## Swagger
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -79,8 +82,6 @@ TEMPLATES = [
         },
     },
 ]
-
-APPEND_SLASH=True
 
 WSGI_APPLICATION = 'dropshipping_api.wsgi.application'
 
@@ -138,3 +139,25 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        "rest_framework.authentication.TokenAuthentication",
+        'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+         #'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+         'rest_framework.permissions.IsAuthenticated',
+         'rest_framework.permissions.IsAdminUser',
+    ),
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    "DEFAULT_SCHEMA_CLASS": 'drf_spectacular.openapi.AutoSchema',
+
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API Swagger - CG Contadores',
+    'DESCRIPTION': 'Documentação de APIS da empresa CG Contadores',
+    'VERSION': '1.0.0',
+}

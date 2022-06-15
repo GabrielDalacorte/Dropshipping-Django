@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CG CONTADORES | PYTHON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+    <link rel="icon" href="https://freepngimg.com/download/python_logo/4-2-python-logo-picture.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_signup.css' %}"/>
+</head>
+<body class="text-center">
+  {% block content %}{% endblock %}
+
+  <img src="{% static 'img/background-login.jpg' %}" class="background">
+
+  <div class="quadrado">
+    <h1 class="cadastrase">Cadastre-se</h1>
+    <img src="{% static 'img/logo-white.png' %}" class="logo">
+    <div class="linha"></div>
+    <form  class="form-signin" method="POST" action="{% url 'register' %}" enctype="multipart/form-data">{% csrf_token %}
+     <br>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="username", class="form-control" id="username" name="username", placeholder="Nome de usuário">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email", class="form-control" id="email" name="email", placeholder="Endereço de e-mail">
+        </div>
+
+        <div class="form-group">
+            <label for="password1">Senha</label>
+            <input type="password", class="form-control" id="password1" name="password1", placeholder="Senha">
+        </div>
+
+        <div class="form-group">
+            <label for="password2">Senha</label>
+            <input type="password", class="form-control" id="password2" name="password2", placeholder="Confirme sua senha:">
+        </div>
+
+        {{ form.erros }}
+        <input type="submit" class="button-cadastra" value="Cadastre-se">
+    </form>
+  </div>
+</body>
+</html>

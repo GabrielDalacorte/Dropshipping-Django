@@ -1,0 +1,9 @@
+{% csrf_token %}
+{% autoescape off %}
+Hi {{ user.username }},
+Clique no link para confirmar o seu registro,
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+Se você acha que não é você, ignore este e-mail.
+{% endautoescape %}
+{% csrf_token %}
+{% csrf_token %}
